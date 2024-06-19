@@ -24,15 +24,24 @@ class _DiaryTabBarViewState extends State<DiaryTabBarView> {
       initialIndex: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(
-            'Futsal Femino UFABC',
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Futsal Femino UFABC',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Image.asset(
+                'assets/escudo_ff.png',
+                height: 40
+              )
+            ]
             ),
-          ),
           backgroundColor: darkGreen
-        ),
+          ),
         body: TabBarView(
           children: [
             TrainigSessionsScreen(),
@@ -44,11 +53,11 @@ class _DiaryTabBarViewState extends State<DiaryTabBarView> {
         ),
         bottomNavigationBar: TabBar(
           tabs: [
-            Tab(icon: Icon(Icons.fitness_center)),
+            Tab(icon: Icon(Icons.sports_soccer)),
             Tab(icon: Icon(Icons.emoji_events)),
             Tab(icon: Icon(Icons.home)),
             Tab(icon: Icon(Icons.attach_money)),
-            Tab(icon: Icon(Icons.person)),
+            Tab(icon: Icon(Icons.directions_run)),
           ],
           indicatorColor: darkGreen,
           labelColor: darkGreen,
