@@ -5,15 +5,15 @@ import 'package:namer_app/screens/monthly_payments_screen.dart';
 import 'package:namer_app/screens/tournaments_screen.dart';
 import 'package:namer_app/screens/training_sessions_screen.dart';
 
-class DiaryTabBarView extends StatefulWidget{
-  const DiaryTabBarView({super.key});
+class MyTabBarView extends StatefulWidget{
+  const MyTabBarView({super.key});
 
   @override
   // ignore: library_private_types_in_public_api
-  _DiaryTabBarViewState createState() => _DiaryTabBarViewState();
+  _MyTabBarViewState createState() => _MyTabBarViewState();
 }
 
-class _DiaryTabBarViewState extends State<DiaryTabBarView> {
+class _MyTabBarViewState extends State<MyTabBarView> {
 
   final darkGreen = Color(0xFF08490A);
 
@@ -28,7 +28,7 @@ class _DiaryTabBarViewState extends State<DiaryTabBarView> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Futsal Femino UFABC',
+                'Futsal Feminino UFABC',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
@@ -44,7 +44,7 @@ class _DiaryTabBarViewState extends State<DiaryTabBarView> {
           ),
         body: TabBarView(
           children: [
-            TrainigSessionsScreen(),
+            TrainingSessionsScreen(),
             TournamentsScreen(),
             HomeScreen(),
             MonthlyPaymentsScreen(),
